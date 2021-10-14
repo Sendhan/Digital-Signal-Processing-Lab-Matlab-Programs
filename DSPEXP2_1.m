@@ -1,0 +1,15 @@
+close();
+clear();
+x = input("Enter the input sequence : ");
+[z, lag] = xcorr(x);
+disp(z);
+subplot(2,1,1);
+stem(x);
+xlabel('n');
+ylabel('x[n]');
+title('Input Sequence');
+subplot(2,1,2);
+stem(lag,z);
+xlabel('n');
+ylabel('x[n]');
+title("Auto-Correlated Sequence");
